@@ -1,5 +1,5 @@
 # nodejs-api-starter(MVC)
-A simple post API boilplate based on MVC pattern.
+A MVC pattern for building highly performant, large scale JSON APIs that anybody who knows the JavaScript language and its modern features will understand.
 
 ## What's in the box?
 1. Basic Authentication
