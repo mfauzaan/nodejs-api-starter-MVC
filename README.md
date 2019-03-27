@@ -24,5 +24,4 @@ A simple post API boilplate based on MVC pattern.
 ## What's the roadmap?
 1. More authentication Method like JWT etc..
 2. Frontend Setup
-3. Test Cases
-4. Asset Managment
+3. Test Casess
