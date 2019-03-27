@@ -18,12 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       }
   },
   });
-  Post.associate = function(models) {
-    // associations
-      Post.hasMany(models.Comment, {
-        foreignKey: 'post_id',
-      });
-  };
   
   return Post;
 };

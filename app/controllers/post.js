@@ -1,7 +1,6 @@
 'use strict';
 
 const Post = require('../models').Post;
-const Comment = require('../models').Comment;
 
 // Exports CRUD Operations as Post Controller
 module.exports = {
