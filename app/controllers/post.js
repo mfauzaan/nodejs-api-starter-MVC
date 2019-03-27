@@ -71,7 +71,7 @@ module.exports = {
       try {
         var image_url = `/${req.file.filename}`
       } catch (error) {
-        var image_url = `/${post.image_url}`
+        var image_url = null
       }
 
       // Perform Update request
