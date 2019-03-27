@@ -1,0 +1,15 @@
+# Node modules
+node_modules
+
+# Environment variables, never commit this file
+.env
+.env.testing
+
+# Lock files
+package-lock.json
+yarn.lock
+
+
+.DS_Store
+.env
+.vscode
