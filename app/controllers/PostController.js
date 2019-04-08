@@ -1,20 +1,18 @@
 'use strict';
 
-const Post = require('../models').Post;
+const { Post } = require('../models');
 
-// Exports CRUD Operations as Post Controller
-module.exports = {
-
+class PostController {
   /**
-   * Display a listing of the posts.
-   */
+  * Display a listing of the posts.
+  */
   async index(req, res) {
     // Query All Posts in the Database
     const posts = await Post.findAll()
 
     // Send response to the route
     res.send(posts)
-  },
+  }
 
 
   /**
@@ -29,7 +27,7 @@ module.exports = {
 
     // Send request to Database
     res.send(post)
-  },
+  }
 
 
   /**
@@ -55,7 +53,7 @@ module.exports = {
 
     // Return response
     res.status(200).json({ message: 'Post has been added successfully', data: post });
-  },
+  }
 
   /**
    * Update the specified post in DB.
@@ -90,8 +88,7 @@ module.exports = {
         }
       })
     }
-
-  },
+  }
 
   /**
    * Remove the specified post from DB.
@@ -107,7 +104,7 @@ module.exports = {
       // Delete post
       await post.destroy()
       // Delete Related comments
-      await Comment.destroy({ where: { post_id: null }})
+      await Comment.destroy({ where: { post_id: null } })
 
       // return response
       res.status(200).json({ message: 'Post has been deleted successfully', data: post });
@@ -121,4 +118,6 @@ module.exports = {
       })
     }
   }
-};
+}
+
+module.exports = new PostController()
